@@ -66,11 +66,11 @@ keyboard_map:			  ; Mapa das teclas e as suas funçoes (ligadas a rotinas)
 		WORD RIGHT; 2     ;tecla para mover o tetra para a direita
 		WORD NADA ; 3
 		WORD NADA ; 4
-		WORD NADA; 5 ;faz o tetra descer mais rapido
+		WORD DESCE_RAPIDO ; 5 ;faz o tetra descer mais rapido
 		WORD NADA ; 6
 		WORD NADA ; 7
 		WORD NADA ; 8
-		WORD DESCE_RAPIDO ; 9
+		WORD NADA ; 9
 		WORD NADA ; a
 		WORD NADA ; b
 		WORD NADA ; c
@@ -356,9 +356,9 @@ calc_end:
 	MOV R2,[R3]
 	SHL R1,2  ;Linha * 4
 	MOV R3,OITO
-	DIV R2,R3  ;Coluna / 8PIXELSCR
+	DIV R2,R3  ;Coluna / 8
 	ADD R1,R2  ;Adição dos dois resultados
-	MOV R3, 8000H
+	MOV R3,PIXELSCR 
 	ADD R1,R3  ;Adicionamos ao endereço incial do PixelScreen e obtemos o endereço pertendido
 	MOV R2,endereco_pixel
 	MOV [R2],R1
@@ -679,6 +679,7 @@ tetramino:
 	
 	
 tetra_0: ;idle
+
 	MOV R1,key
 	MOV R4,[R1]
 	MOV R3,TECLA17
