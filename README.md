@@ -2,7 +2,7 @@
 
 Project for the Introduction to Computer Arquitectures (IAC) course in IST 2016/2017.
 
-It is a simple tetris game that runs on the custom circuit simulator PEPE made by DEI.
+It is a simple tetris game that runs on the custom circuit simulator PEPE made by [DEI](https://dei.tecnico.ulisboa.pt/en).
 
 ## Running the game
 
